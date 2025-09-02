@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #0030ee;
+  --background-color: #ffffff;
+  --font-family-base: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  background-color: #f0f4f8;
+  color: var(--primary-color);
+}
+
+.page-container {
+  max-width: 594px;
+  margin: 2rem auto;
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  body {
+    background-color: var(--background-color);
+  }
+  .page-container {
+    margin: 0;
+    border-left: none;
+    border-right: none;
+    max-width: 100%;
+  }
+}
+
+/* CSS from section:header */
+.site-header {
+    padding: 0 25px;
+    border-bottom: 1px solid var(--primary-color);
+    position: relative;
+}
+
+.main-nav {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px; /* 40px overall left - 25px header padding */
+    margin-top: 25px;
+}
+
+.nav-item a {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    line-height: 1.2;
+    padding-bottom: 8px;
+}
+
+.nav-item.active {
+    position: relative;
+    border-left: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    background-color: var(--background-color);
+    margin-bottom: -1px; /* Overlap the header's bottom border */
+}
+
+.nav-item.active a {
+    font-size: 24px;
+    padding: 0 12px 8px 12px;
+}
+
+@media (max-width: 640px) {
+    .site-header {
+        padding: 0 10px;
+    }
+    .nav-list {
+        gap: 16px;
+        padding-left: 10px;
+    }
+    .nav-item a {
+        font-size: 14px;
+    }
+    .nav-item.active a {
+        font-size: 20px;
+    }
+}
+
+/* CSS from section:profile */
+.profile-content {
+    padding: 30px 40px 40px;
+}
+
+.profile-intro {
+    display: flex;
+    gap: 35px; /* x: 215 - (40 + 139.6) ~= 35px */
+    align-items: flex-start;
+}
+
+.profile-image {
+    width: 139.64px;
+    height: 164px;
+    border: 1px solid var(--primary-color);
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.detail-item {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.detail-item:nth-child(1) {
+    margin-bottom: 35px; /* y: 125 - (75 + 15) = 35px */
+}
+
+.detail-item:nth-child(2) {
+    margin-bottom: 45px; /* y: 200 - (125 + 30) = 45px */
+}
+
+.profile-bio {
+    margin-top: 11px; /* y: 250 - (75 + 164) = 11px */
+}
+
+.profile-bio p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-wrap; /* Preserve line breaks from Figma */
+}
+
+@media (max-width: 640px) {
+    .profile-content {
+        padding: 20px;
+    }
+    .profile-intro {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+    .profile-details {
+        align-items: center;
+    }
+    .detail-item:nth-child(1),
+    .detail-item:nth-child(2) {
+        margin-bottom: 20px;
+    }
+    .profile-bio {
+        margin-top: 30px;
+        text-align: left;
+    }
+}
