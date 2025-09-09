@@ -113,7 +113,7 @@ header {
 }
 
 .mobile-menu a:hover {
-    background-color: #00bcd4;
+    background-color: #0030EE;
     color: #fff;
 }
 
@@ -135,7 +135,7 @@ header {
     background-color: rgba(18, 18, 18, 0.9);
     padding: 50px;
     border-radius: 10px;
-    border: 1px solid #00bcd4;
+    border: 1px solid #0030EE;
     box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
     max-width: 800px;
 }
@@ -146,7 +146,7 @@ header {
     border-radius: 50%;
     object-fit: cover;
     object-fit: contain;
-    border: 3px solid #00bcd4;
+    border: 3px solid #0030EE;
     box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
     animation: pulse 2s infinite;
 }
@@ -389,4 +389,5 @@ header {
         flex-direction: column; 
     }
 }
+
 
